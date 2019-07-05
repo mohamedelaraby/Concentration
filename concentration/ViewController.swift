@@ -10,39 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
 // Setup FlipCount
     var flipCount = 0 { didSet{ flipCountlabel.text = "Flips: \(flipCount)" } }
 
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var flipCountlabel: UILabel!
 
-    //Emoji array.
     var emojiChoices = ["🎃", "👻", "🎃", "👻"]
-    
-    
     
 //Touch the cards.
     @IBAction func touchCard(_ sender: UIButton){
-        
-        flipCard(withEmoji: "👻", on: sender)
-        
-//        flipCount += 1
-//        if let cardNumber = cardButtons.index(of:sender){
-//            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
-//        } else {
-//            print("Chosen card was not in cardButton")
-//        }
+        flipCount += 1
+        if let cardNumber = cardButtons.index(of: sender){
+            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+        } else {
+            print("cards is not matched")
+        }
+       
     }
 
     //Flip the cards over.
     func flipCard(withEmoji emoji: String, on button: UIButton) {
-//        if button.currentTitle == emoji {
-//            button.setTitle("", for: .normal)
-//            button.backgroundColor = .orange
-//        } else {
-//            button.setTitle(emoji, for: .normal)
-//        }
+        if button.currentTitle == emoji {
+            button.setTitle(" ", for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+        } else {
+            button.setTitle(emoji, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
     }
     
 }
