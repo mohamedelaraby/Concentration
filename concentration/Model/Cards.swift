@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct Cards {
-     var isFacedUp = false
+struct Card {
+    
+    var isFacedUp = false
     var isMatched = false
     var identifier: Int
+    
+    init(isFacedUp: Bool, isMatched:Bool) {
+        self.isMatched = isMatched
+        self.isFacedUp = isFacedUp
+    }
+  init(identifier: Int) {
+        self.identifier = identifier
+    }
+    
 }

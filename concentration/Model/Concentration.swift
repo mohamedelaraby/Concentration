@@ -11,9 +11,13 @@ import Foundation
 class Concentration {
     
     //Inilaize an empty array of cards.
-    var cards = [Cards] ()
+    var cards = [Card] ()
     
     func chooseCards(at index: Int){
-        
+    }
+    
+    
+    init(numberOfPairsOfCards: Int){
+         let card = Card(identifier: identifier)
     }
 }

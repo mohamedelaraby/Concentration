@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				44A6123E22CF416B004C6D3E /* Model */,
-				44A6123D22CF4159004C6D3E /* View */,
 				44A6123C22CF4140004C6D3E /* Controller */,
+				44A6123D22CF4159004C6D3E /* View */,
 				44CC088522CB8214005979F8 /* Supporting filed */,
 				44C60DDB22C9370E0031339E /* Info.plist */,
 			);

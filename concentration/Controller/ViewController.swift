@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var game = Concentration()
+    
 // Setup FlipCount
     var flipCount = 0 { didSet{ flipCountlabel.text = "Flips: \(flipCount)" } }
 
